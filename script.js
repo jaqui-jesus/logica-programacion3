@@ -1,28 +1,28 @@
-function calcularFactorial(n){
-    let resultado = 1;
+function calculateFactorial(n){
+    let result = 1;
     for (let i = 1; i <= n; i++) {
-        resultado *= i;
+        result *= i;
     }
-    return resultado;
+    return result;
 }
 
-function pedirNumero(){
-    let numero;
+function askNumber(){
+    let number;
     do {
-        const entrada = prompt("Introduce un número entero positivo:");
-        numero = parseInt(entrada);
+        const input = prompt("Introduce un número entero positivo:");
+        number = parseInt(input);
 
-        if (isNaN(numero) || numero < 0 || !Number.isInteger(numero)) {
+        if (isNaN(number) || number < 0 || !Number.isInteger(number)) {
             alert("Por favor, introduce un número entero positivo. No letras ni decimales.");
         }
-    } while (isNaN(numero) || numero < 0 || !Number.isInteger(numero));
-    return numero;
+    } while (isNaN(number) || number < 0 || !Number.isInteger(number));
+    return number;
 }
 
-const numero = pedirNumero();
-const factorial = calcularFactorial(numero);
+const number = askNumber();
+const factorial = calculateFactorial(number);
 
-console.log(`El factorial de ${numero} es ${factorial}.`);
+console.log(`El factorial de ${number} es = ${factorial}.`);
 
-const resultadoElemento = document.getElementById("resultado");
-resultadoElemento.textContent = `El factorial de ${numero} es ${factorial}.`;
+const resultElement = document.getElementById("result");
+resultElement.textContent = `El factorial de ${number} es = ${factorial}.`;
